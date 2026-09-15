@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <p id="demo">Hello</p>
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello JavaScript!";
+        }
+
+        function function1(paino, pituus) {
+            return paino / (pituus * pituus);
+        }
+
+        function function2() {
+            let bmi = function1(70, 1.75);
+            alert("Your BMI is: " + bmi);
+        }
+
+    </script>
+    <button onclick="myFunction()">Click me</button>
+    <button onclick="function2()">Calculate BMI</button>
+</body>
+</html>
