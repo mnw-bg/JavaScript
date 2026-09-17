@@ -6,7 +6,8 @@
     <title>Javascript</title>
 </head>
 <body>
-    <p id="demo">Hello</p>
+    <p id="demo"></p>
+    <p id="demo2"></p>
     <script>
         function myFunction() {
             document.getElementById("demo").innerHTML = "Hello JavaScript!";
@@ -21,8 +22,45 @@
             alert("Your BMI is: " + bmi);
         }
 
-    </script>
+        function functionajan() {
+            document.getElementById("demo2").innerHTML = 
+                    new Date().getDate() + "." + 
+                    (new Date().getMonth() + 1) + "." + 
+                    new Date().getFullYear() +
+                    " klo " + new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds()
+                    ;
+            //perus helppoa, mutta liian pitkä ja ei kaunis
+        }
+
+        function functionajan2(){
+            document.getElementById("demo2").innerHTML = new Date().toLocaleString();
+        }
+
+
+       
+        function seconds2() { 
+                let d = new Date().getSeconds();
+                document.getElementById("demo2").innerHTML = d;
+                if (d % 2 == 0) {
+
+                    document.getElementById("demo2").style.color = "blue";
+                   document.write.seconds2(d);
+
+                }
+                else {
+
+                    document.getElementById("demo2").style.color = "red";
+                    document.write.seconds2(d);
+
+                }
+        }
+
+        </script>
+    
     <button onclick="myFunction()">Click me</button>
     <button onclick="function2()">Calculate BMI</button>
+    <button onclick="functionajan()">Show Current Time</button></body>
+    <button onclick="functionajan2()">Show Current Time (Short)</button>
+    <button onclick="seconds2()">Show Seconds</button>
 </body>
 </html>
