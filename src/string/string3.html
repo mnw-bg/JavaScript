@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string3</title>
+</head>
+<body>
+    <section></section>
+
+    <script>
+        const quote = "I dO nOT lIke gREen eGgS anD HAM";
+
+        // Don't edit the code above here!
+
+        let fixedQuote = quote.toLowerCase();//tekee sitä pikku kirjain
+        const firstLetter = fixedQuote.slice(0, 1);//ota ensimmäinen kirjain eli pieni i
+        fixedQuote = fixedQuote.replace(firstLetter, firstLetter.toUpperCase());// tilalle i isok I :ksi fixedQuotessa
+        fixedQuote = fixedQuote.replace("green eggs and ham", "pickled onions");//tilalle sama kuin ylhäällä
+        const finalQuote = `${fixedQuote}.`;//fixedQuotesta mitä on tähän asti päivittänyt
+
+
+        // Don't edit the code below here!
+
+        const section = document.querySelector("section");
+        const para1 = document.createElement("p");
+        para1.textContent = finalQuote;
+        section.appendChild(para1);
+    </script>
+</body>
+</html>
