@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silmukka3</title>
+</head>
+<body>
+    <section></section>
+
+    <script>
+        let i = 500;
+        const para = document.createElement("p");
+        const section = document.querySelector("section");
+        function isPrime(num) {
+          for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+              return false;
+            }
+          }
+          return true;
+        }
+        // Don't edit the code above here!
+        
+        do {
+          if (isPrime(i)) {
+            para.textContent += `${i}, `;
+          }
+          i--;
+        } while (i > 1);
+        
+        
+        // Don't edit the code below here!
+        
+        section.appendChild(para);
+    </script>
+</body>
+</html>
