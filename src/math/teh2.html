@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teh2</title>
+</head>
+<body>
+    <section></section>
+
+    <script>
+        // Final result should be 4633.33
+
+        let result = 7 + 13 / 9 + 7;
+        let result2 = (100 / 2) * 6;
+
+        // Add your code here
+        let finalNumber = finalResult = Number((result * result2).toFixed(2));
+        let x = typeof finalNumber;
+        // Don't edit the code below here!
+
+        const section = document.querySelector("section");
+        const para1 = document.createElement("p");
+        para1.textContent = `Your finalResult is ${finalResult}`;
+        const para2 = document.createElement("p");
+        const para3 = document.createElement("p");
+        const finalNumberCheck =
+        isNaN(finalNumber) === false
+            ? "finalNumber is a number type. Well done!"
+            : `Oops! finalNumber is not a number.`;
+        para2.textContent = finalNumberCheck;
+        para3.textContent = x;
+        section.appendChild(para1);
+        section.appendChild(para2);
+        section.appendChild(para3);
+
+    </script>
+</body>
+</html>
