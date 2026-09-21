@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ristinolla</title>
+</head>
+<body>
+    <div id = "peli">
+        <button></button><button></button><button></button><br>
+        <button></button><button></button><button></button><br>
+        <button></button><button></button><button></button>
+    </div>
+
+    <script>
+        function käsitteleKlikkaus(event) {
+            let painike = event.target;
+            if(painike.textContent === ""){
+                painike.textContent = vuoro;
+                vuoro = (vuoro ==="X")? "O" : "X";
+            }
+        }
+
+        let painikeet = document.querySelectorAll("#peli button");
+        painikkeet.foreach(painike =>{
+            painike.addEventlistener("click, käsitteleKlikkaus");
+        })
+    </script>
+</body>
+</html>
