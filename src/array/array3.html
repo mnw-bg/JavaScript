@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array3</title>
+</head>
+<body>
+    <section></section>
+
+    <script>
+        const myArray = [
+        "Ryu",
+        "Ken",
+        "Chun-Li",
+        "Cammy",
+        "Guile",
+        "Sakura",
+        "Sagat",
+        "Juri",
+        ];
+
+        myArray.pop();
+        myArray.push("Zangief");
+        myArray.push("Ibuki");
+
+        myArray.forEach((index, element) => {
+          const newElement = `${index} (${element})`;
+          myArray[element] = newElement;
+        });
+        const myString = myArray.join(" - ");
+        // Don't edit the code below here!
+
+        const section = document.querySelector("section");
+        const para1 = document.createElement("p");
+        para1.textContent = myString;
+        section.appendChild(para1);
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

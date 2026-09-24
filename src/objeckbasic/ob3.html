@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+
+    <script>
+        const cat = [
+            {
+            name: "Bertie",
+            breed: "Cymric",
+            color: "white",
+            greeting() {
+                console.log("Meow!");
+            }}
+        ,
+            {
+            name : "kitty",
+            breed : "four hand",
+            color : "green",
+            greeting()
+            {
+                console.log(`Hello, said ${this.name} the ${this.breed}.`);
+            }},
+        ];
+
+        cat[1].greeting();
+        cat[0].greeting();
+    </script>
+</body>
+</html>

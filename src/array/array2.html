@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array2</title>
+</head>
+<body>
+    <section></section>
+
+    <script>
+        const myString = "Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri";
+
+        let myArray = myString.split("+");
+        document.write(myArray);
+        let arrayLength = myArray.length;
+        let lastItem = myArray[arrayLength -1];
+
+        // Don't edit the code below here!
+
+        const section = document.querySelector("section");
+        const para1 = document.createElement("p");
+        para1.textContent = `Array: ${myArray}`;
+        const para2 = document.createElement("p");
+        para2.textContent = `The length of the array is ${arrayLength}.`;
+        const para3 = document.createElement("p");
+        para3.textContent = `The last item in the array is "${lastItem}".`;
+        section.appendChild(para1);
+        section.appendChild(para2);
+        section.appendChild(para3);
+    </script>
+</body>
+</html>
