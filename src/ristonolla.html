@@ -13,7 +13,8 @@
     </div>
 
     <script>
-        function käsitteleKlikkaus(event) {
+        let vuoro = "X";
+        function kasitteleKlikkaus(event) {
             let painike = event.target;
             if(painike.textContent === ""){
                 painike.textContent = vuoro;
@@ -21,9 +22,9 @@
             }
         }
 
-        let painikeet = document.querySelectorAll("#peli button");
-        painikkeet.foreach(painike =>{
-            painike.addEventlistener("click, käsitteleKlikkaus");
+        let painikkeet = document.querySelectorAll("#peli button");
+        painikkeet.forEach(nappi => {
+            nappi.addEventListener("click",kasitteleKlikkaus);
         })
     </script>
 </body>
