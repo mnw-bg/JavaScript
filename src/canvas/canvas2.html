@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canva</title>
+</head>
+<body>
+    <button class="off">Machine is off</button>
+
+    <script>
+        const btn = document.querySelector("button");
+        
+        btn.addEventListener ("click", event => {
+            if (btn.className === "off"){
+                btn.className = "on";
+                btn.textContent = "Machine is on";
+            }
+            else{
+                btn.className = "off"
+                btn.textContent = "Machine is off"
+            }
+        })
+    </script>
+</body>
+</html>
