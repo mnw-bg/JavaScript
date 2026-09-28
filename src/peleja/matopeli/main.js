@@ -47,6 +47,7 @@ document.addEventListener("keydown", (event) =>{
 });
 //liike
 setInterval (() => {
+    //olen käytänyt chatgpt, copilot-tekoäly tästä alkaen
     Mato.hanta.unshift({ X: Mato.x, Y: Mato.y }) 
     Mato.aikaaKasvamiseen -= 1;
  

@@ -6,6 +6,7 @@ const timeText = document.getElementById("time");
 let score = 0;
 let time = 30;
 //liikkuu randommin paikkaa
+//olen käytänyt chatgpt, copilot-tekoäly tästä alkaen
 function moveTarget() {
     const game = document.getElementById("game");
 
