@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keräilypeli</title>
+</head>
+<body>
+    <canvas width = 800
+            height = 600
+            style = background-color:beige;>
+    </canvas>
+    
+    <script>
+        // Apufunktio etäisyyden laskemiseen
+        function etäisyys(hahmo1, hahmo2) {
+            const dx = hahmo1.X - hahmo2.X
+            const dy = hahmo1.Y - hahmo2.Y
+            return Math.sqrt(dx*dx + dy*dy)
+        }
+        
+        // Apufunktio siirtämiseen
+        function siirräKohti(hahmo1, hahmo2, nopeus) {
+            const dx = hahmo2.X - hahmo1.X
+            const dy = hahmo2.Y - hahmo1.Y
+            const e = etäisyys(hahmo2, hahmo1)
+            
+            hahmo1.X += dx/e*nopeus
+            hahmo1.Y += dy/e*nopeus
+        }
+        let piirtäjä = kangas.getContext("2d");
+        const pelaaja = {
+            X: 100,
+            Y: 100,
+            pisteet: 0,
+        }
+        // Pidetään hiiren koordinaatit ajan tasalla
+        kangas.onmousemove = event => {
+            hiiri.X = event.offsetX
+            hiiri.Y = event.offsetY
+        }
+        function piirrä() {
+            // Tyhjennetään ruutu
+            piirtäjä.clearRect(0, 0, 800, 600)
+            
+            /* Piirretään hahmot tässä */
+            
+            // Pyydetään selainta piirtämään samat asiat kohta uudestaan
+            requestAnimationFrame(piirrä)
+        }
+        
+        // Pyydetään selainta piirtämään asiat ensimmäisen kerran
+        requestAnimationFrame(piirrä)
+        setInterval(() => {
+            
+            /* Tähän tulee liikuttamisen koodi */
+            
+        })
+        
+    </script>
+</body>
+</html>
