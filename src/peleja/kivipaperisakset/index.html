@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kivi, paperi, sakset</title>
+</head>
+<body>
+
+    <h1>Kivi, paperi, sakset</h1>
+    <!-- vaihtoehto -->
+    <button onclick="play('kivi')">Kivi</button>
+    <button onclick="play('paperi')">Paperi</button>
+    <button onclick="play('sakset')">Sakset</button>
+    <!-- tulos -->
+    <p id="result"></p>
+
+    <script>
+        //olen käytänyt chatgpt, copilot-tekoäly tästä alkaen
+        //aloitus heli kun valitese
+        function play(playerChoice) {
+            const choices = ["kivi", "paperi", "sakset"];
+            //random tietokone
+            const randomNumber = Math.floor(Math.random() * 3);
+            const computerChoice = choices[randomNumber];
+            //lopputulos
+            let result;
+            //jos sama kuin random tasapeli
+            if (playerChoice === computerChoice) {
+                result = "Tasapeli!";
+            }
+            //muuta jos voittaa
+            else if (
+                (playerChoice === "kivi" && computerChoice === "sakset") ||
+                (playerChoice === "paperi" && computerChoice === "kivi") ||
+                (playerChoice === "sakset" && computerChoice === "paperi")
+            ) {
+                result = "Voitit!";
+            }
+            //jos ei tietokone voittaa
+            else {
+                result = "Tietokone voitti!";
+            }
+            //tulostaa koko vastaus
+            document.getElementById("result").textContent =
+                "Sinä: " + playerChoice +
+                " | Tietokone: " + computerChoice +
+                " → " + result;
+        }
+    </script>
+
+</body>
+</html>
